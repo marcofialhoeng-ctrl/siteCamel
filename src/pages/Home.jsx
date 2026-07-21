@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function Home() {
-  const [query, setQuery] = useState('');
-
   const destaques = [
     { title: 'Linha Leve', desc: 'Componentes de suspensão, freios e motor para carros de passeio.', icon: '🚗' },
     { title: 'Linha Pesada', desc: 'Peças robustas e reforçadas para caminhões, carretas e ônibus.', icon: '🚛' },
-    { title: 'Ferramentas', desc: 'Chaves, macacos, equipamentos pneumáticos.', icon: '🔧' },
+    { title: 'Ferramentas', desc: 'Chaves, macacos, equipamentos pneumáticos e diagnósticos.', icon: '🔧' },
     { title: 'Elétrica & Óleos', desc: 'Baterias, lubrificantes, filtros e lâmpadas de alta performance.', icon: '⚡' },
   ];
 
@@ -19,19 +17,8 @@ export default function Home() {
           <span style={{ color: '#2563eb' }}>Preço e Qualidade</span> para o Seu Veículo.
         </h1>
         <p className="hero-subtitle">
-          Encontre a peça ideal para o seu veículo rodar com total segurança e desempenho.
+          Compre as peças e ferramentas indicadas pelo seu mecânico com o melhor preço da região.
         </p>
-
-        <form className="search-box" onSubmit={(e) => { e.preventDefault(); alert(`Buscando por: ${query}`); }}>
-          <input 
-            type="text" 
-            placeholder="Digite o nome da peça, modelo ou ferramenta..." 
-            className="search-input"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-          <button type="submit" className="btn-primary">Buscar</button>
-        </form>
       </section>
 
       <section className="section">
