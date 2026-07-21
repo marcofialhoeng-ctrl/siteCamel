@@ -46,7 +46,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  height: 110px; /* Aumentado para acomodar a logo maior com folga */
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,9 +59,9 @@ body {
   gap: 10px;
 }
 
-/* Estilo para a imagem da Logo em tamanho maior */
+/* Estilo para a imagem da Logo */
 .logo-img {
-  height: 96px; /* Dobro do tamanho original */
+  height: 96px;
   width: auto;
   object-fit: contain;
 }
@@ -321,4 +321,80 @@ body {
   text-align: center;
   color: var(--text-muted);
   font-size: 0.9rem;
+}
+
+/* ==========================================
+   AJUSTES EXCLUSIVOS PARA CELULAR (MOBILE)
+   ========================================== */
+@media (max-width: 768px) {
+
+  /* Cabeçalho mais fluido no celular */
+  .header-content {
+    height: auto;
+    padding: 12px 16px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Reduz a logo no celular */
+  .logo-img {
+    height: 55px; 
+  }
+
+  /* Ajusta o menu */
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-button {
+    font-size: 0.8rem;
+  }
+
+  /* Botão do WhatsApp ocupa a largura inteira no mobile */
+  .btn-whatsapp {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Texto principal proporcional */
+  .hero {
+    padding: 35px 16px 25px;
+  }
+
+  .hero-title {
+    font-size: 1.75rem; 
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    margin-bottom: 14px;
+  }
+
+  /* Busca empilhada no celular */
+  .search-box {
+    flex-direction: column;
+    padding: 6px;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
 }
